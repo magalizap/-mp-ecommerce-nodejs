@@ -31,7 +31,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/detail', (req, res) => {
-    res.render('detail', {data: req.query, view:'item', script:'index.js'})
+    const info = req.query
+    res.render('detail', {data: info, view:'item', script:'index.js'})
 })
 
 app.post('/detail', async (req, res) => {
