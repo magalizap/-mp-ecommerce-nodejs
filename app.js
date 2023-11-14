@@ -32,7 +32,6 @@ app.get('/', (req, res) => {
 
 app.get('/detail', (req, res) => {
     const info = req.query
-    console.log(info)
     res.render('detail', { view:'item', script:'index.js', data: info})
 })
 

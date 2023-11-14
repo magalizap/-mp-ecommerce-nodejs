@@ -2,7 +2,7 @@ const mp = new MercadoPago('APP_USR-ff96fe80-6866-4888-847e-c69250754d38');
 
 
 document.getElementById('checkout-btn').addEventListener('click', () => {
-    const orderData = {  //title, unit, img, price 
+    const orderData = {  
         id: 1234,
         img: document.getElementById('img').currentSrc,
         title: document.getElementById('title').innerHTML,
