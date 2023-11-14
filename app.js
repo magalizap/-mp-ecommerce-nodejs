@@ -40,11 +40,11 @@ app.post('/detail', async (req, res) => {
 
     await preference.create( { body: {
         items: [{
-            id: JSON.parse(id),
+            id: id,
             title: title,
             description: 'Dispositivo móvil de Tienda e-commerce',
-            quantity: JSON.parse(unit),
-            unit_price: JSON.parse(price) ,
+            quantity: Number(unit),
+            unit_price: Number(price) ,
             picture_url: img,
         }],
         payer:{
