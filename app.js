@@ -32,7 +32,8 @@ app.get('/', (req, res) => {
 
 app.get('/detail', (req, res) => {
     const info = req.query
-    res.render('detail', {data: info, view:'item', script:'index.js'})
+    console.log(info)
+    res.render('detail', { view:'item', script:'index.js', data: info})
 })
 
 app.post('/detail', async (req, res) => {
@@ -73,12 +74,12 @@ app.post('/detail', async (req, res) => {
         },
         external_reference: 'magalisol2307@gmail.com',
         back_urls: {
-            success: 'https://magalizap-mp-commerce-nodejs.onrender.com/success', 
-            failure: 'https://magalizap-mp-commerce-nodejs.onrender.com/failure',
-            pending: 'https://magalizap-mp-commerce-nodejs.onrender.com/pending'
+            success: 'http://localhost:3000/success', //https://magalizap-mp-commerce-nodejs.onrender.com/success
+            failure: 'http://localhost:3000/failure', //https://magalizap-mp-commerce-nodejs.onrender.com/failure
+            pending: 'http://localhost:3000/pending'  //https://magalizap-mp-commerce-nodejs.onrender.com/pending
         },
 
-        notification_url: 'https://magalizap-mp-commerce-nodejs.onrender.com/webhook',
+        notification_url: 'http://localhost:3000/webhook', //  https://magalizap-mp-commerce-nodejs.onrender.com/webhook
         auto_return: 'approved',
 
     }, requestOptions: {
