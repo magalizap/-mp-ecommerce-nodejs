@@ -10,7 +10,7 @@ document.getElementById('checkout-btn').addEventListener('click', () => {
         price: document.getElementById('price').innerHTML
     }
     console.log(orderData)
-    fetch('http://localhost:3000/detail', { //https://magalizap-mp-commerce-nodejs.onrender.com/detail
+    fetch('https://magalizap-mp-commerce-nodejs.onrender.com/detail', { //  http://localhost:3000/detail
         method: 'POST',
         headers: {
             "Content-Type": "application/json",

@@ -74,12 +74,12 @@ app.post('/detail', async (req, res) => {
         },
         external_reference: 'magalisol2307@gmail.com',
         back_urls: {
-            success: 'http://localhost:3000/success', //https://magalizap-mp-commerce-nodejs.onrender.com/success
-            failure: 'http://localhost:3000/failure', //https://magalizap-mp-commerce-nodejs.onrender.com/failure
-            pending: 'http://localhost:3000/pending'  //https://magalizap-mp-commerce-nodejs.onrender.com/pending
+            success: 'https://magalizap-mp-commerce-nodejs.onrender.com/success', //  http://localhost:3000/success
+            failure: 'https://magalizap-mp-commerce-nodejs.onrender.com/failure', //  http://localhost:3000/failure
+            pending: 'https://magalizap-mp-commerce-nodejs.onrender.com/pending'  //  http://localhost:3000/pending
         },
 
-        notification_url: 'http://localhost:3000/webhook', //  https://magalizap-mp-commerce-nodejs.onrender.com/webhook
+        notification_url: 'https://magalizap-mp-commerce-nodejs.onrender.com/webhook', //    http://localhost:3000/webhook
         auto_return: 'approved',
 
     }, requestOptions: {
