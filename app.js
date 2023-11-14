@@ -36,15 +36,15 @@ app.get('/detail', (req, res) => {
 
 app.post('/detail', async (req, res) => {
     const { title, unit, img, price, id } = req.body
-    
+    console.log(title, unit, img, price, id )
 
     await preference.create( { body: {
         items: [{
             id: id,
             title: title,
             description: 'Dispositivo móvil de Tienda e-commerce',
-            quantity: Number(unit),
-            unit_price: Number(price) ,
+            quantity: JSON.parse(unit),
+            unit_price: JSON.parse(price) ,
             picture_url: img,
         }],
         payer:{
