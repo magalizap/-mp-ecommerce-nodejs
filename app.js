@@ -37,7 +37,6 @@ app.get('/detail', (req, res) => {
 
 app.post('/detail', async (req, res) => {
     const { title, unit, img, price, id } = req.body
-    console.log(title, unit, img, price, id )
 
     await preference.create( { body: {
         items: [{
@@ -123,8 +122,9 @@ app.get('/pending', (req, res) => {
 	})
 })
 
-app.post('/webhook', async (req, res) => {
+app.post('/webhook', (req, res) => {
     const payment = req.query
+    console.log(payment)
     /*console.log(payment)
     if(payment.type === 'payment'){
         const data = await preference.search(payment['data.id'])
