@@ -123,7 +123,7 @@ app.get('/pending', (req, res) => {
 })
 
 app.post('/webhook', (req, res) => {
-    const payment = req.query
+    const payment = req.body
     console.log(payment)
     /*console.log(payment)
     if(payment.type === 'payment'){
@@ -131,7 +131,8 @@ app.post('/webhook', (req, res) => {
         console.log(data)
     }*/
     
-    res.json({result: payment})
+    res.statusCode(200).json({result: payment})
+    //res.json({result: payment})
 })
 
 
