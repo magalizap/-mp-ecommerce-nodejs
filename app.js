@@ -89,7 +89,7 @@ app.post('/detail', async (req, res) => {
         })
     })
 	.catch((error) => console.log(error))
-    //res.render('detail')
+    
 })
 
 app.get('/success', (req, res) => {
